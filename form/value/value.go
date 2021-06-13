@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"git.sr.ht/~jackmordaunt/gio-planet/form"
+	"git.sr.ht/~jackmordaunt/gio-planet/form/parse"
 )
 
 // Int maps text to an integer number.
@@ -25,7 +26,7 @@ func (v Int) To() (string, error) {
 }
 
 func (v Int) From(text string) (err error) {
-	*v.Value, err = parse.ParseInt(text)
+	*v.Value, err = parse.Int(text)
 	return err
 }
 
@@ -43,7 +44,7 @@ func (v Float) To() (string, error) {
 }
 
 func (v Float) From(text string) (err error) {
-	*v.Value, err = parse.ParseFloat(text)
+	*v.Value, err = parse.Float(text)
 	return err
 }
 
@@ -80,7 +81,7 @@ func (v Days) To() (string, error) {
 }
 
 func (v Days) From(text string) (err error) {
-	*v.Value, err = parse.ParseDay(text)
+	*v.Value, err = parse.Day(text)
 	return err
 }
 
@@ -115,7 +116,7 @@ func (v Date) To() (string, error) {
 }
 
 func (v Date) From(text string) (err error) {
-	*v.Value, err = parse.ParseDate(text)
+	*v.Value, err = parse.Date(text)
 	return err
 }
 
