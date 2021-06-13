@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"gioui.org/x/form"
+	"git.sr.ht/~jackmordaunt/gio-planet/form"
 )
 
 // Int maps text to an integer number.
